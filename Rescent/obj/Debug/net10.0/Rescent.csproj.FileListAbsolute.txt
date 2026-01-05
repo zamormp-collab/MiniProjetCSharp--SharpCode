@@ -1,0 +1,15 @@
+/Users/Zkod/Rescent/bin/Debug/net10.0/Rescent
+/Users/Zkod/Rescent/bin/Debug/net10.0/Rescent.deps.json
+/Users/Zkod/Rescent/bin/Debug/net10.0/Rescent.runtimeconfig.json
+/Users/Zkod/Rescent/bin/Debug/net10.0/Rescent.dll
+/Users/Zkod/Rescent/bin/Debug/net10.0/Rescent.pdb
+/Users/Zkod/Rescent/obj/Debug/net10.0/Rescent.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Zkod/Rescent/obj/Debug/net10.0/Rescent.AssemblyInfoInputs.cache
+/Users/Zkod/Rescent/obj/Debug/net10.0/Rescent.AssemblyInfo.cs
+/Users/Zkod/Rescent/obj/Debug/net10.0/Rescent.csproj.CoreCompileInputs.cache
+/Users/Zkod/Rescent/obj/Debug/net10.0/Rescent.sourcelink.json
+/Users/Zkod/Rescent/obj/Debug/net10.0/Rescent.dll
+/Users/Zkod/Rescent/obj/Debug/net10.0/refint/Rescent.dll
+/Users/Zkod/Rescent/obj/Debug/net10.0/Rescent.pdb
+/Users/Zkod/Rescent/obj/Debug/net10.0/Rescent.genruntimeconfig.cache
+/Users/Zkod/Rescent/obj/Debug/net10.0/ref/Rescent.dll
