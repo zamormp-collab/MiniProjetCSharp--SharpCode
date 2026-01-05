@@ -11,7 +11,7 @@ namespace Rescent.Domaine
     // Declaration des attributs de la classe abstraite Ressources
         private string _nom;
         private string _responsable;
-        //private StatutRessource _statut;
+        private StatutRessource _statut;
 
     // Definition des proprietes de la classe Ressources
         // La propriété Nom avec validation
@@ -40,7 +40,7 @@ namespace Rescent.Domaine
                     _responsable = value;
                 }
         }
-        /*// La propriété Statut avec validation
+        // La propriété Statut avec validation
         public StatutRessource Statut
         {  
             get => _statut; 
@@ -71,6 +71,6 @@ namespace Rescent.Domaine
         public virtual void AfficherInfos(string nom, string responsable, StatutRessource statut)
         { 	
 		Console.WriteLine ($"=====      Nom de la ressource : {nom.ToUpper()}.     =====\n=====      Nom du responsable : {responsable}.     =====\n=====      Statut de la ressource : {statut}.     =====");
-	    }*/
+	    }
     }
 }
