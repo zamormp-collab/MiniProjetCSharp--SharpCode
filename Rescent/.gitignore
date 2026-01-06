@@ -1,0 +1,14 @@
+# .NET
+bin/
+obj/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# User / System
+*.user
+*.suo
