@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rescent.Domaine
+namespace Rescent.Domaine.Entites
 {
     public abstract class Ressources
     {
@@ -48,13 +48,16 @@ namespace Rescent.Domaine
                 {
                     switch (_statut)
                     {
+                        case StatutRessource.Perdu:
+                        _statut = value;
+                            break;
                         case StatutRessource.EnReparation:
                             _statut = value;
                             break;
-                        case StatutRessource.Reservee:
+                        case StatutRessource.Reserve:
                             _statut = value;
                             break;
-                        case StatutRessource.Occupee:
+                        case StatutRessource.Occupe:
                             _statut = value;
                             break;
                         case StatutRessource.Disponible:
@@ -67,10 +70,16 @@ namespace Rescent.Domaine
                 
         }
 
-        // Implementation d'une methode concrete AfficherInfos --- IGNORE ---
+        //Implémentation d'une méthode concrète EstDisponible --- IGNORE ---
+        public virtual bool EstDisponibe()
+        {
+            return this.Statut == StatutRessource.Disponible;
+        }
+        
+        // Implementation d'une methode concrète AfficherInfos --- IGNORE ---
         public virtual void AfficherInfos(string nom, string responsable, StatutRessource statut)
         { 	
-		Console.WriteLine ($"=====      Nom de la ressource : {nom.ToUpper()}.     =====\n=====      Nom du responsable : {responsable}.     =====\n=====      Statut de la ressource : {statut}.     =====");
+		Console.WriteLine ($"=====      Ressource : {nom.ToUpper()}.     =====\n=====      Nom responsable : {responsable}.     =====\n=====      Statut : {statut}.     =====");
 	    }
     }
 }

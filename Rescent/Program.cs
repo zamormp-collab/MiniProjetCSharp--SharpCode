@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rescent.Domaine.Entites;
+using Rescent.Domaine.Enums;
 
 namespace Rescent.Domaine
 {
@@ -15,5 +17,6 @@ namespace Rescent.Domaine
             Console.WriteLine();
             Console.WriteLine("Bienvenue au système de gestion de réservations de la CENTRALEO Services!");
         }
+        Ressources salle = new Salle("Auditorium", "Edwin Satire", StatutRessource.Disponible, 50);
     }
 }
