@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U6FPrKNPNBs=",
+  "dgSpecHash": "bchdvXXSO/U=",
   "success": true,
   "projectFilePath": "/Users/Zkod/Rescent/Rescent.csproj",
-  "expectedPackageFiles": [
-    "/Users/Zkod/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
-    "/Users/Zkod/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
-    "/Users/Zkod/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.22/microsoft.netcore.app.host.osx-arm64.8.0.22.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

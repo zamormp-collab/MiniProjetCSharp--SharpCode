@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rescent.Domaine.Enums;
 
 namespace Rescent.Domaine.Entites
 {
@@ -27,13 +28,13 @@ namespace Rescent.Domaine.Entites
 
     // Constructeur de la classe fille Salle
     // Instanciation du constructeur de la classe fille Salle
-        public Salle(string nom, string responsable, StatutRessource statut, int capacite) : base()
+        /*public Salle(string nom, string responsable, StatutRessource statut, int capacite) : base()
         {
             this.Nom = nom;
             this.Responsable = responsable;
             this.Statut = statut;
             this.Capacite = capacite;
-        }
+        }*/
 
     // Surcharge de la méthode AfficherInfos
         public override void AfficherInfos(string nom, string responsable, StatutRessource statut)
@@ -45,7 +46,7 @@ namespace Rescent.Domaine.Entites
     //Surcharge de la methode EstDisponible
         public override bool EstDisponible()
         {
-            return base.EstDisponible();
+            return Statut == StatutRessource.Disponible;
         }
     }
 }

@@ -17,6 +17,6 @@ namespace Rescent.Domaine
             Console.WriteLine();
             Console.WriteLine("Bienvenue au système de gestion de réservations de la CENTRALEO Services!");
         }
-        Ressources salle = new Salle("Auditorium", "Edwin Satire", StatutRessource.Disponible, 50);
+        //Ressources salle = new Salle("Auditorium", "Edwin Satire", StatutRessource.Disponible, 50);
     }
 }

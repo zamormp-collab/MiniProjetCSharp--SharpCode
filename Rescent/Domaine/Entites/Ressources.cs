@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rescent.Domaine.Enums;
 
 namespace Rescent.Domaine.Entites
 {
@@ -46,11 +47,8 @@ namespace Rescent.Domaine.Entites
             get => _statut; 
                 protected set
                 {
-                    switch (_statut)
+                    switch (value)
                     {
-                        case StatutRessource.Perdu:
-                        _statut = value;
-                            break;
                         case StatutRessource.EnReparation:
                             _statut = value;
                             break;
@@ -71,15 +69,14 @@ namespace Rescent.Domaine.Entites
         }
 
         //Implémentation d'une méthode concrète EstDisponible --- IGNORE ---
-        public virtual bool EstDisponibe()
-        {
-            return this.Statut == StatutRessource.Disponible;
-        }
+        public abstract bool EstDisponible();
         
         // Implementation d'une methode concrète AfficherInfos --- IGNORE ---
         public virtual void AfficherInfos(string nom, string responsable, StatutRessource statut)
         { 	
-		Console.WriteLine ($"=====      Ressource : {nom.ToUpper()}.     =====\n=====      Nom responsable : {responsable}.     =====\n=====      Statut : {statut}.     =====");
+		Console.WriteLine ($"=====      Ressource : {nom.ToUpper()}.     =====");
+		Console.WriteLine ($"=====      Nom responsable : {responsable}.     =====");
+		Console.WriteLine ($"=====      Statut : {statut}.     =====");
 	    }
     }
 }
