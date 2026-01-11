@@ -28,13 +28,13 @@ namespace Rescent.Domaine.Entites
 
     // Constructeur de la classe fille ChambrePassage
     // Instanciation du constructeur de la classe fille ChambrePassage
-        /*public ChambrePassage(string nom, string responsable, StatutRessource statut, int nombrelit) : base()
+        public ChambrePassage(string nom, string responsable, StatutRessource statut, int nombrelit) : base()
         {
             this.Nom = nom;
             this.Responsable = responsable;
             this.Statut = statut;
             this.NombreLit = nombrelit;
-        }*/
+        }
 
     // Surcharge de la méthode AfficherInfos
         public override void AfficherInfos(string nom, string responsable, StatutRessource statut)

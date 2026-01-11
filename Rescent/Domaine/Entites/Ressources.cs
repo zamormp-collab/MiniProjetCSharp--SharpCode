@@ -68,7 +68,7 @@ namespace Rescent.Domaine.Entites
                 
         }
 
-        //Implémentation d'une méthode concrète EstDisponible --- IGNORE ---
+        //Declaration d'une méthode abstraite EstDisponible --- IGNORE ---
         public abstract bool EstDisponible();
         
         // Implementation d'une methode concrète AfficherInfos --- IGNORE ---
