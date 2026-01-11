@@ -7,7 +7,7 @@ using Rescent.Domaine.Enums;
 
 namespace Rescent.Domaine.Entites
 {
-    public abstract class Ressources
+    public abstract class Ressource
     {
     // Declaration des attributs de la classe abstraite Ressources
         private string _nom;
@@ -68,15 +68,21 @@ namespace Rescent.Domaine.Entites
                 
         }
 
+    protected Ressource(string nom, string responsable)
+        {
+            Nom = nom;
+            Responsable = responsable;
+            Statut = StatutRessource.Disponible;
+        }
+
         //Declaration d'une méthode abstraite EstDisponible --- IGNORE ---
         public abstract bool EstDisponible();
         
         // Implementation d'une methode concrète AfficherInfos --- IGNORE ---
-        public virtual void AfficherInfos(string nom, string responsable, StatutRessource statut)
+        public virtual void AfficherInfos()
         { 	
-		Console.WriteLine ($"=====      Ressource : {nom.ToUpper()}.     =====");
-		Console.WriteLine ($"=====      Nom responsable : {responsable}.     =====");
-		Console.WriteLine ($"=====      Statut : {statut}.     =====");
+		Console.WriteLine ($"=====      Ressource : {Nom.ToUpper()}.     =====");
+		Console.WriteLine ($"=====      Nom responsable : {Responsable}.     =====");
 	    }
     }
 }

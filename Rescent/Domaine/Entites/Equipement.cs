@@ -7,7 +7,7 @@ using Rescent.Domaine.Enums;
 
 namespace Rescent.Domaine.Entites
 {
-    public class Equipement : Ressources //, IReservable, IUtilisable, IMaintenable, IEquipable, IDescriptible, IContactable, IDisponible
+    public class Equipement : Ressource //, IReservable, IUtilisable, IMaintenable, IEquipable, IDescriptible, IContactable, IDisponible
     {
     // Surcharge d'attributs de la classe fille Equipement
         private string _specifications;
@@ -54,10 +54,14 @@ namespace Rescent.Domaine.Entites
 
     // Constructeur de la classe fille Equipement
     // Instanciation du constructeur de la classe fille Equipement
-        public Equipement(string nom, string responsable, StatutRessource statut, string specifications, string serialNumber, int quantite) : base()
+        public Equipement(
+            string nom, 
+            string responsable, 
+            StatutRessource statut, 
+            string specifications, 
+            string serialNumber, 
+            int quantite) : base(nom, responsable)
         {
-            this.Nom = nom;
-            this.Responsable = responsable;
             this.Statut = statut;
             this.Specifications = specifications;
             this.SerialNumber = serialNumber;
@@ -65,13 +69,13 @@ namespace Rescent.Domaine.Entites
         }
 
     // Surcharge de la méthode AfficherInfos
-        public override void AfficherInfos(string nom, string responsable, StatutRessource statut)
+        public override void AfficherInfos()
         { 	
-            base.AfficherInfos(base.Nom, base.Responsable, base.Statut);
-            Console.WriteLine();
-		    Console.WriteLine ($"Spécifications :\n {Specifications}.");
-            
-            Console.WriteLine ($"Il y a {Quantite} unité(s) de cet équipement.");
+            base.AfficherInfos();
+            Console.WriteLine ($"=====      Statut : {Statut}.     =====");
+		    Console.WriteLine ($"=====      Spécifications : {Specifications}.     =====");
+            Console.WriteLine ($"=====      Numéro de série : {SerialNumber}.     =====");
+            Console.WriteLine ($"=====      Il y a {Quantite} unité(s) de cet équipement.     =====");
         }
 
     //Surcharge de la methode EstDisponible

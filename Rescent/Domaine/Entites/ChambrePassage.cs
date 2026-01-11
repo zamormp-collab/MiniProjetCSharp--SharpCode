@@ -7,7 +7,7 @@ using Rescent.Domaine.Enums;
 
 namespace Rescent.Domaine.Entites
 {
-    public class ChambrePassage : Ressources //, IReservable, IUtilisable, IMaintenable, IEquipable, IDescriptible, IContactable, IDisponible
+    public class ChambrePassage : Ressource //, IReservable, IUtilisable, IMaintenable, IEquipable, IDescriptible, IContactable, IDisponible
     {
     // Surcharge d'attributs de la classe fille ChambrePassage
         private int _nombrelit;
@@ -28,19 +28,17 @@ namespace Rescent.Domaine.Entites
 
     // Constructeur de la classe fille ChambrePassage
     // Instanciation du constructeur de la classe fille ChambrePassage
-        public ChambrePassage(string nom, string responsable, StatutRessource statut, int nombrelit) : base()
+        public ChambrePassage(string nom, string responsable, StatutRessource statut, int nombrelit) : base(nom, responsable)
         {
-            this.Nom = nom;
-            this.Responsable = responsable;
-            this.Statut = statut;
             this.NombreLit = nombrelit;
         }
 
     // Surcharge de la méthode AfficherInfos
-        public override void AfficherInfos(string nom, string responsable, StatutRessource statut)
+        public override void AfficherInfos()
         { 	
-            base.AfficherInfos(base.Nom, base.Responsable, base.Statut);
-		    Console.WriteLine ($"La chambre a {NombreLit} lit(s).");
+            base.AfficherInfos();
+            Console.WriteLine ($"=====      Statut : {Statut}.     =====");
+		    Console.WriteLine ($"=====      La chambre a {NombreLit} lit(s).     =====");
         }
 
     //Surcharge de la methode EstDisponible

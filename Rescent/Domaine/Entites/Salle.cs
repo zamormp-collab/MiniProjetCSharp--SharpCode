@@ -7,7 +7,7 @@ using Rescent.Domaine.Enums;
 
 namespace Rescent.Domaine.Entites
 {
-    public class Salle : Ressources //, IReservable, IUtilisable, IMaintenable, IEquipable, IDescriptible, IContactable, IDisponible
+    public class Salle : Ressource //, IReservable, IUtilisable, IMaintenable, IEquipable, IDescriptible, IContactable, IDisponible
     {
     // Surcharge d'attributs de la classe fille Salle
         private int _capacite;
@@ -28,19 +28,22 @@ namespace Rescent.Domaine.Entites
 
     // Constructeur de la classe fille Salle
     // Instanciation du constructeur de la classe fille Salle
-        public Salle(string nom, string responsable, StatutRessource statut, int capacite) : base()
-        {
-            this.Nom = nom;
-            this.Responsable = responsable;
-            this.Statut = statut;
-            this.Capacite = capacite;
-        }
+        public Salle(string nom, string responsable, StatutRessource statut, int capacite)
+        : base(nom, responsable)
+    {
+        if (capacite <= 0)
+            throw new ArgumentException("Capacité invalide.");
+
+        Statut = statut;
+        Capacite = capacite;
+    }
 
     // Surcharge de la méthode AfficherInfos
-        public override void AfficherInfos(string nom, string responsable, StatutRessource statut)
+        public override void AfficherInfos()
         { 	
-            base.AfficherInfos(base.Nom, base.Responsable, base.Statut);
-		    Console.WriteLine ($"La salle a une capacité de : {Capacite} place.");
+            base.AfficherInfos();
+            Console.WriteLine ($"=====      Statut : {Statut}.     =====");
+		    Console.WriteLine ($"=====      La salle a une capacité de : {Capacite} place.     =====");
         }
 
     //Surcharge de la methode EstDisponible
